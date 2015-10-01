@@ -1,0 +1,27 @@
+{
+  "name": "todo-express",
+  "version": "1.0.0",
+  "description": "A very basic todo app created using express.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/segmentationfaulter/todo-express.git"
+  },
+  "keywords": [
+    "todo"
+  ],
+  "author": "Muhammad Saqib <segmentationfaulter@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/segmentationfaulter/todo-express/issues"
+  },
+  "homepage": "https://github.com/segmentationfaulter/todo-express#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "mongodb": "^2.0.45",
+    "morgan": "^1.6.1"
+  }
+}
