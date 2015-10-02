@@ -8,6 +8,7 @@ app.set('view engine', 'jade')
 
 // middlewares
 app.use('/', index)
+app.use('/create', index)
 
 // listen on port 3000
 app.listen(3000)
