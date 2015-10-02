@@ -21,7 +21,9 @@ function findAllTasks (cb) {
       return cb(err, null)
     }
     var tasks = db.collection('tasks')
-    tasks.find({}).toArray((err, docs) => {
+    tasks.find({})
+    .project({task: 1, _id: 0})
+    .toArray((err, docs) => {
       if (err) {
         return cb(err, null)
       }
