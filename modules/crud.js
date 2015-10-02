@@ -15,4 +15,20 @@ function insertTask (doc, cb) {
   })
 }
 
+function findAllTasks (cb) {
+  mongo.connect(url, (err, db) => {
+    if (err) {
+      return cb(err, null)
+    }
+    var tasks = db.collection('tasks')
+    tasks.find({}).toArray((err, docs) => {
+      if (err) {
+        return cb(err, null)
+      }
+      return cb(null, docs)
+    })
+  })
+}
+
 module.exports.insertTask = insertTask
+module.exports.findAllTasks = findAllTasks

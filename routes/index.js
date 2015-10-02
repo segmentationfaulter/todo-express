@@ -1,6 +1,7 @@
 var assert = require('assert')
 var router = require('express').Router()
 var insertTask = require('../modules/crud').insertTask
+var findAllTasks = require('../modules/crud').findAllTasks
 
 router.get('/', (req, res) => {
   res.render('index', {title: 'My Todo App'})
