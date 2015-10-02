@@ -7,11 +7,10 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-  var doc = {task: 'This is my first task'}
-  insertTask(doc, (err, result, db) => {
+  insertTask(req.body, (err, result, db) => {
     assert.equal(err, null)
-    console.log('Items inserted: ' + result.insertedCount)
     db.close()
+    res.redirect('/')
   })
 })
 
