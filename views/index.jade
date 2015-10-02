@@ -2,3 +2,7 @@ extends ./layout.jade
 block content
   body
     h1 Welcome to #{title}
+    form(method="post" action="/create")
+      label(for="new-task") Enter new task: 
+      input(type="text" id="new-task" name="task")
+      input(type="button" value="Submit")
