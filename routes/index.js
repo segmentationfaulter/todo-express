@@ -1,7 +1,7 @@
 var router = require('express').Router()
 
 router.get('/', (req, res) => {
-  res.send('My TODO App')
+  res.render('index', {title: 'My Todo App'})
 })
 
 module.exports = router
