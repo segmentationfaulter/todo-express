@@ -25,7 +25,7 @@ function findAllTasks (cb) {
       if (err) {
         return cb(err, null)
       }
-      return cb(null, docs)
+      return cb(null, docs, db)
     })
   })
 }
