@@ -6,3 +6,9 @@ block content
       label(for="new-task") Enter new task: 
       input(type="text" id="new-task" name="task")
       button(type="submit") Add
+    h3 My TODO's
+    ul
+      for task in tasks
+        li #{task.task} 
+      else
+        |Sorry, no tasks found

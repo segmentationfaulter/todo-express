@@ -4,7 +4,12 @@ var insertTask = require('../modules/crud').insertTask
 var findAllTasks = require('../modules/crud').findAllTasks
 
 router.get('/', (req, res) => {
-  res.render('index', {title: 'My Todo App'})
+  findAllTasks((err, tasks, db) => {
+    assert.equal(err, null)
+    console.log(tasks)
+    res.render('index', {title: 'My ToDo App', tasks: tasks})
+    db.close()
+  })
 })
 
 router.post('/', (req, res) => {
